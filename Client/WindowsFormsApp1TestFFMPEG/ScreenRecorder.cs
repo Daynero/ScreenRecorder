@@ -70,6 +70,8 @@ namespace WindowsFormsApp1TestFFMPEG
                 {
                     // Remove the sent image from the queue
                     _imageQueue.Dequeue();
+                    // Delete the sent image locally
+                    File.Delete(imagePath);
                     // Continue sending next image
                     SendNextImage();
                 }

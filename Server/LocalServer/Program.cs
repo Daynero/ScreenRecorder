@@ -1,10 +1,5 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
+﻿using System.Drawing.Imaging;
 using System.Net;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 class Program
 {
@@ -66,17 +61,14 @@ class SimpleServer
     {
         try
         {
-            // Отримуємо дані (зображення) з POST-запиту
             using (var reader = new BinaryReader(context.Request.InputStream))
             {
                 byte[] imageBytes = reader.ReadBytes((int)context.Request.ContentLength64);
 
-                // Перетворюємо масив байтів у зображення
                 using (var ms = new MemoryStream(imageBytes))
                 {
                     using (var image = System.Drawing.Image.FromStream(ms))
                     {
-                        // Зберігаємо зображення в папці "Документи" з унікальною назвою
                         string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         string fileName = Path.Combine(documentsPath, $"{Guid.NewGuid()}.jpg");
                         image.Save(fileName, ImageFormat.Jpeg);
@@ -86,7 +78,6 @@ class SimpleServer
                 }
             }
 
-            // Відправляємо відповідь клієнту
             context.Response.StatusCode = (int)HttpStatusCode.OK;
             context.Response.Close();
         }
