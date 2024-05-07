@@ -16,11 +16,13 @@ namespace WindowsFormsApp1TestFFMPEG
         private const int ScreenHeight = 1440;
         private string _tempPath = "";
         private readonly Queue<string> _imageQueue = new Queue<string>();
+        private bool _isRecording;
         private bool _isSending;
 
         public ScreenRecorder()
         {
             CreateTempFolder("tempScreens");
+            _isRecording = false;
             _isSending = false;
         }
 
@@ -31,62 +33,79 @@ namespace WindowsFormsApp1TestFFMPEG
             _tempPath = pathName;
         }
 
-        public void TakeScreenShoot()
+        public void StartRecording()
         {
-            _bounds = Screen.PrimaryScreen.Bounds;
-            using (Bitmap bitmap = new Bitmap(ScreenWidth, ScreenHeight))
-            {
-                using (Graphics g = Graphics.FromImage(bitmap))
-                {
-                    //Add screen to bitmap:
-                    g.CopyFromScreen(new Point(_bounds.Left, _bounds.Top), Point.Empty, _bounds.Size);
-                }
-                //Save screenshot to queue:
-                string name = _tempPath + "//screenshot-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".png";
-                bitmap.Save(name, ImageFormat.Png);
-                _imageQueue.Enqueue(name);
-
-                //Dispose of bitmap:
-                bitmap.Dispose();
-            }
-
-            // Start sending images if not already sending
-            if (!_isSending)
-                SendNextImage();
+            _isRecording = true;
+            // Start taking screenshots
+            Task.Run(() => TakeScreenshots());
+            // Start sending images to the server
+            Task.Run(() => SendImagesToServer());
         }
 
-        private async void SendNextImage()
+        public void StopRecording()
         {
-            // If there are images in the queue
-            if (_imageQueue.Count > 0)
-            {
-                _isSending = true;
-                string imagePath = _imageQueue.Peek();
-                byte[] imageBytes = File.ReadAllBytes(imagePath);
+            _isRecording = false;
+        }
 
-                // Try to send the image
-                bool success = await SendImageToServer(imageBytes, "http://localhost:8080/");
-                if (success)
+        private void TakeScreenshots()
+        {
+            while (_isRecording)
+            {
+                _bounds = Screen.PrimaryScreen.Bounds;
+                using (Bitmap bitmap = new Bitmap(ScreenWidth, ScreenHeight))
                 {
-                    // Remove the sent image from the queue
-                    _imageQueue.Dequeue();
-                    // Delete the sent image locally
-                    File.Delete(imagePath);
-                    // Continue sending next image
-                    SendNextImage();
+                    using (Graphics g = Graphics.FromImage(bitmap))
+                    {
+                        // Add screen to bitmap
+                        g.CopyFromScreen(new Point(_bounds.Left, _bounds.Top), Point.Empty, _bounds.Size);
+                    }
+                    // Save screenshot to queue
+                    string name = _tempPath + "//screenshot-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".png";
+                    bitmap.Save(name, ImageFormat.Png);
+                    _imageQueue.Enqueue(name);
+
+                    // Dispose of bitmap
+                    bitmap.Dispose();
+                }
+            }
+        }
+
+        private async Task SendImagesToServer()
+        {
+            // Continue sending images while the application is recording or there are images in the queue
+            while (_isRecording || _imageQueue.Count > 0)
+            {
+                // If there are images in the queue
+                if (_imageQueue.Count > 0)
+                {
+                    _isSending = true;
+                    string imagePath = _imageQueue.Peek();
+                    byte[] imageBytes = File.ReadAllBytes(imagePath);
+
+                    // Try to send the image
+                    bool success = await SendImageToServer(imageBytes, "http://localhost:8080/");
+                    if (success)
+                    {
+                        // Remove the sent image from the queue
+                        _imageQueue.Dequeue();
+                        // Delete the sent image locally
+                        File.Delete(imagePath);
+                    }
+                    else
+                    {
+                        // Retry sending the image after some time
+                        await Task.Delay(5000); // 5 seconds delay
+                    }
                 }
                 else
                 {
-                    // Retry sending the image after some time
-                    await Task.Delay(5000); // 5 seconds delay
-                    SendNextImage();
+                    // No more images in the queue, wait before checking again
+                    await Task.Delay(1000); // 1 second delay
                 }
             }
-            else
-            {
-                // No more images in the queue, reset sending flag
-                _isSending = false;
-            }
+
+            // No more images in the queue and recording stopped, set sending flag to false
+            _isSending = false;
         }
 
         private async Task<bool> SendImageToServer(byte[] imageBytes, string serverUrl)
