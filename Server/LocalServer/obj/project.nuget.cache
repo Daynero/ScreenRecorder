@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ggyZx67xIXraQNqDtr07Z4xQYd1qWodb5I2cakKhqy0b8H3fag7rmehIxkPvrqqvUF0FptO/YhzXVJiMx1t1aQ==",
+  "dgSpecHash": "kHEFuxuHPlPqXCy8p8wErButZV3zWoD0S+hm37w0tzr0TjUGyJ85b4vJgSVwhkGynDYNl7VHb0Av3b7Z8Ttd5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\LocalServer.csproj",
+  "projectFilePath": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\LocalServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Roman\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\Roman\\.nuget\\packages\\system.drawing.common\\8.0.4\\system.drawing.common.8.0.4.nupkg.sha512"

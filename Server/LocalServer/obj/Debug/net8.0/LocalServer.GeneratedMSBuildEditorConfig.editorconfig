@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LocalServer
-build_property.ProjectDir = C:\Users\Roman\Documents\Apps\LocalServer\LocalServer\
+build_property.ProjectDir = C:\Users\Roman\Documents\Apps\ScreenRecorder\Server\LocalServer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

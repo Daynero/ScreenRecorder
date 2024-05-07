@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03A62027-3A89-4368-BE01-3E49B32D6D75}|LocalServer\\LocalServer.csproj|c:\\users\\roman\\documents\\apps\\screenrecorder\\server\\localserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A62027-3A89-4368-BE01-3E49B32D6D75}|LocalServer\\LocalServer.csproj|solutionrelative:localserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\Program.cs",
+              "RelativeDocumentMoniker": "LocalServer\\Program.cs",
+              "ToolTip": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\Program.cs",
+              "RelativeToolTip": "LocalServer\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T11:44:14.8Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

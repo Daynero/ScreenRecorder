@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\LocalServer.csproj": {}
+    "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\LocalServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\LocalServer.csproj": {
+    "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\LocalServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\LocalServer.csproj",
+        "projectUniqueName": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\LocalServer.csproj",
         "projectName": "LocalServer",
-        "projectPath": "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\LocalServer.csproj",
+        "projectPath": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\LocalServer.csproj",
         "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Roman\\Documents\\Apps\\LocalServer\\LocalServer\\obj\\",
+        "outputPath": "C:\\Users\\Roman\\Documents\\Apps\\ScreenRecorder\\Server\\LocalServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
