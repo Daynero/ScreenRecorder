@@ -33,9 +33,6 @@ C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\b
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\swresample-2.dll
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\swscale-4.dll
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\Accord.dll.config
-C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\WindowsFormsApp1TestFFMPEG.exe.config
-C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\WindowsFormsApp1TestFFMPEG.exe
-C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\WindowsFormsApp1TestFFMPEG.pdb
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\Accord.dll
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\Accord.Video.dll
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\Accord.Video.FFMPEG.x64.dll
@@ -48,5 +45,8 @@ C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\o
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\WindowsFormsApp1TestFFMPEG.csproj.GenerateResource.cache
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\WindowsFormsApp1TestFFMPEG.csproj.CoreCompileInputs.cache
 C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\WindowsF.C86895DB.Up2Date
-C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\WindowsFormsApp1TestFFMPEG.exe
-C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\WindowsFormsApp1TestFFMPEG.pdb
+C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\ScreenCapturingClient.exe.config
+C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\ScreenCapturingClient.exe
+C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\bin\Debug\ScreenCapturingClient.pdb
+C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\ScreenCapturingClient.exe
+C:\Users\Roman\Documents\Apps\ScreenRecorder\Client\WindowsFormsApp1TestFFMPEG\obj\Debug\ScreenCapturingClient.pdb

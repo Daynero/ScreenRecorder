@@ -7,7 +7,7 @@
     <ProjectGuid>{7D234CD5-4CEF-4D92-814F-D90DD9B3C07E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp1TestFFMPEG</RootNamespace>
-    <AssemblyName>WindowsFormsApp1TestFFMPEG</AssemblyName>
+    <AssemblyName>ScreenCapturingClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
